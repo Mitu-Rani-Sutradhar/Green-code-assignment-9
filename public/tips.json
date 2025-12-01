@@ -1,0 +1,22 @@
+[
+  {
+    "watering": "Allow soil to dry out completely between waterings. Typically every 2-4 weeks, less in winter. Overwatering is the biggest risk.",
+    "sunlight": "Thrives in bright, indirect light but tolerates low light conditions very well. Avoid direct, intense afternoon sun.",
+    "fertilizing": "Feed once during the spring and once in the summer with a balanced liquid houseplant fertilizer (e.g., 10-10-10) diluted to half strength."
+  },
+  {
+    "watering": "Water when the top 1-2 inches of soil are dry. Leaves will begin to droop slightly when thirsty. Avoid soggy soil.",
+    "sunlight": "Prefers medium to bright, indirect sunlight. Can survive in low light, but variegation may fade. Direct sun can scorch the leaves.",
+    "fertilizing": "Apply a general-purpose houseplant fertilizer once a month during the spring and summer growing season. Reduce to every 6-8 weeks in fall/winter."
+  },
+  {
+    "watering": "Water thoroughly until it drains from the bottom, then allow the top 2-3 inches of soil to dry out. Usually once a week to every 10 days.",
+    "sunlight": "Requires bright, filtered light. Place near a south or west-facing window, ensuring the sun's rays are not directly hitting the leaves for too long.",
+    "fertilizing": "Fertilize with a high-nitrogen liquid fertilizer every two weeks during the spring and summer. Stop fertilizing in the fall and winter."
+  },
+  {
+    "watering": "Highly drought-tolerant. Water infrequently—only when the soil is completely dry. Less is always more. Can go 3-5 weeks without water.",
+    "sunlight": "Tolerates very low light, but grows best in bright, indirect light. It's one of the best low-light plants.",
+    "fertilizing": "Fertilizing is rarely necessary. If you choose to, use a balanced liquid fertilizer once or twice a year during the warm months."
+  }
+]
