@@ -1,12 +1,14 @@
-import React, { use, useState } from 'react';
+import React, { use, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, sendPasswordResetEmail, signInWithPopup } from 'firebase/auth';
 import { auth } from '../firebase/firebase.config';
 
 const googleProvider = new GoogleAuthProvider();
 
 const Login = () => {
+
+  const emailRef = useRef();
 
   const handleGoogleSignIn = ()=>{
       // console.log('google button clicked')
@@ -47,6 +49,21 @@ const handleLogIn =(e)=>{
   });
 };
 
+const handleForgetPassword=()=>{
+  const email = emailRef.current.value;
+  console.log('forget password', email)
+  sendPasswordResetEmail(auth,email)
+  .then(() => {
+    alert('please check your email');
+  })
+  .catch((error)=>{
+    console.error("Password reset error:", error); // Log the actual error object
+    alert(`An error occurred: ${error.message}`); // Show a more specific error
+})
+}
+
+
+
     return (
         <div className="hero bg-base-200 ">
   <div className="hero-content flex-col lg: mx-auto ">
@@ -61,7 +78,10 @@ const handleLogIn =(e)=>{
 
 
           <label className="label">Email</label>
-          <input name="email" type="email" className="input" placeholder="Email" required />
+          <input type="email" name="email"
+           className="input" 
+          ref={emailRef} 
+          placeholder="Email" required />
           
           
           <label className="label">Password</label>
@@ -71,7 +91,7 @@ const handleLogIn =(e)=>{
 
 
           <div className='flex justify-between px-3 pt-3'>
-          <a className="link link-hover">Forgot password?</a>
+          <a onClick={handleForgetPassword} className="link link-hover">Forgot password?</a>
           <a className="link link-hover text-secondary"><Link to="/auth/signup">Sign Up</Link></a>
           
           </div>

@@ -21,11 +21,11 @@ const handleLogOut =()=>{
 
     return (
       
-   <div className='w-full rounded-sm  p-5  flex justify-between items-center
+   <div className='w-full rounded-sm  p-5  flex justify-between items-center items-center
    '>
 
-   <div className='text-5xl bg-emerald-700 rounded-2xl'><PiTreePalm /></div>
-   <div className='flex gap-6 text-2xl underline'>
+   <div className='text-5xl bg-emerald-700 rounded-2xl mb-20'><PiTreePalm /></div>
+   <div className='flex gap-6 text-2xl underline mb-20'>
          <NavLink to="/">Home</NavLink>
          <NavLink to="/plants/plantId">Plants</NavLink>
          <NavLink to="/profile">My Profile</NavLink>
@@ -34,20 +34,31 @@ const handleLogOut =()=>{
    <div className=''>
     
     {
-        user ? (<div>
+        user ? (
         <div>
-             <img className='w-[50px] h-[50px] mb-2 mx-auto rounded-full mt-5' src={`${user ? user.photoURL
-             : userIcon}`} alt="" />
+            <details className="dropdown mr-20 mb-20">
+  <summary className="btn bg-white border-0 shadow-0"> <img className='w-[50px] h-[50px] mb-2 mx-auto rounded-full mt-5' src={`${user ? user.photoURL
+             : userIcon}`} alt="" referrerpolicy="no-referrer"/></summary>
+  <ul className=" dropdown-content bg-base-100 rounded-box z-1 p-2 shadow-sm w-[150px] mt-5">
+    <li><a>{user.displayName}</a></li>
+    <li><a><button onClick={handleLogOut} className='btn text-xl'>Logout</button></a></li>
+  </ul>
+</details>
             
-        </div>
+        {/* <div>
+             <img className='w-[50px] h-[50px] mb-2 mx-auto rounded-full mt-5' src={`${user ? user.photoURL
+             : userIcon}`} alt="" referrerpolicy="no-referrer"/>
+            
+        </div> */}
 
-        <div className='flex gap-2'>
+        {/* <div className='flex gap-2'>
         <p className='text-lg font-bold bg-base-300 p-1 rounded-2xl ml-9'>{user.displayName}</p>
         <button onClick={handleLogOut} className='btn text-xl'>Logout</button>
+        </div> */}
         </div>
-        </div>) : ( 
+        ) : ( 
         
-        <div> <Link to="/auth/login" className='btn text-2xl mr-2'>Login</Link>
+        <div className='mb-20'> <Link to="/auth/login" className='btn text-2xl mr-2'>Login</Link>
          <Link to="/auth/signup" className='btn text-2xl'>Register</Link></div>)
     }
     
