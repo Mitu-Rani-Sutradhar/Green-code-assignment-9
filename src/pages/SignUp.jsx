@@ -1,10 +1,32 @@
 import React, { use, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth } from '../firebase/firebase.config';
+
+const googleProvider = new GoogleAuthProvider();
 
 const SignUp = () => {
+
+const handleGoogleSignIn = ()=>{
+    // console.log('google button clicked')
+    signInWithPopup(auth, googleProvider)
+    .then(result =>{
+      console.log(result.user);
+      navigate("/")
+    })
+    .catch(error =>{
+      console.log(error);
+    })
+}
+
+
     const {createUser, setUser, updateUser} = use(AuthContext);
     const [nameError,setNameError]= useState("");
+    const [passwordError,setPasswordError]= useState("");
+   
+
+
 
     const navigate = useNavigate();
 
@@ -25,6 +47,25 @@ const SignUp = () => {
         const email = form.email.value;
         const photo = form.photo.value;
         const password = form.password.value;
+
+       const hasUppercase = /[A-Z]/;
+       const hasLowercase = /[a-z]/;
+
+        if(password.length < 6){
+          setPasswordError("Password must be at least 6 character");
+          return;
+        }
+        if (!hasUppercase.test(password)) {
+          setPasswordError( "Password must have at least one uppercase letter.");
+          return;
+        } 
+        if (!hasLowercase.test(password)) {
+    setPasswordError( "Password must have at least one lowercase letter.");
+    return;
+  }
+        else{
+          setPasswordError("");
+        }
         console.log({name,email,photo,password});
         createUser(email,password)
         .then(result=>{
@@ -49,6 +90,7 @@ const SignUp = () => {
     // ..
   });
     }
+
     return (
          <div className="hero bg-base-200 ">
   <div className="hero-content flex-col lg: mx-auto ">
@@ -75,7 +117,13 @@ const SignUp = () => {
           <label className="label">Password</label>
           <input name="password" type="password" className="input" placeholder="Password" required />
 
+          {passwordError && <p className="text-sm text-error">{passwordError}</p>}
+
+          <button onClick={handleGoogleSignIn} className='btn mt-5 text-amber-800'>Sign in with Google</button>
+
           <button type="submit" className="btn btn-neutral mt-4">Register</button>
+        
+          <p>Already have an account? <Link className='text-red-600 underline' to={"/auth/login"}>Login</Link></p>
         </fieldset>
       </form>
     </div>

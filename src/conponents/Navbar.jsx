@@ -15,6 +15,10 @@ const handleLogOut =()=>{
 });
     
 }
+
+
+
+
     return (
       
    <div className='w-full rounded-sm  p-5  flex justify-between items-center
@@ -32,12 +36,13 @@ const handleLogOut =()=>{
     {
         user ? (<div>
         <div>
-             <img className='w-[50px] h-[50px] mb-2 mx-auto rounded-full mt-5' src={`${user ? user.photoURL: userIcon}`} alt="" />
-             <p className='px-25'><RiArrowDropDownLine /></p>
+             <img className='w-[50px] h-[50px] mb-2 mx-auto rounded-full mt-5' src={`${user ? user.photoURL
+             : userIcon}`} alt="" />
+            
         </div>
 
         <div className='flex gap-2'>
-        <p className='text-lg font-bold border-1 p-1 rounded-2xl ml-9'>{user.displayName}</p>
+        <p className='text-lg font-bold bg-base-300 p-1 rounded-2xl ml-9'>{user.displayName}</p>
         <button onClick={handleLogOut} className='btn text-xl'>Logout</button>
         </div>
         </div>) : ( 

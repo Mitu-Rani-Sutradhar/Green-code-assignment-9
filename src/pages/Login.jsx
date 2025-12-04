@@ -1,8 +1,23 @@
 import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth } from '../firebase/firebase.config';
+
+const googleProvider = new GoogleAuthProvider();
 
 const Login = () => {
+
+  const handleGoogleSignIn = ()=>{
+      // console.log('google button clicked')
+      signInWithPopup(auth, googleProvider)
+      .then(result =>{
+        console.log(result.user);
+      })
+      .catch(error =>{
+        console.log(error);
+      })
+  }
 
 const [error,setError] = useState("");
 
@@ -60,6 +75,7 @@ const handleLogIn =(e)=>{
           <a className="link link-hover text-secondary"><Link to="/auth/signup">Sign Up</Link></a>
           
           </div>
+          <button onClick={handleGoogleSignIn} className='btn mt-5 text-amber-800'>Sign in with Google</button>
           <button type="submit" className="btn btn-neutral mt-4">Login</button>
         </fieldset>
       </form>
