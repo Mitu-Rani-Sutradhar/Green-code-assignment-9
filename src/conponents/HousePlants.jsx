@@ -13,7 +13,7 @@ const HousePlants = () => {
                 Houseplants for Living Room
             </div>
 
-            <div className="flex justify-between">
+            <div className="lg:flex justify-between">
                 {
             housePlants.map(plants =>(
                 <div className="">

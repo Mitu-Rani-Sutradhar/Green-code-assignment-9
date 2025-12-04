@@ -6,9 +6,9 @@ import { FaSquarePinterest } from "react-icons/fa6";
 const Footer = () => {
     return (
         <div className='bg-base-300 h-[200px]'>
-            <footer className="footer flex justify-between items-center sm:footer-horizontal text-base-content px-80 pt-6">
+            <footer className="footer px-7 lg:footer flex justify-between items-center sm:footer-horizontal text-base-content">
   
-  <nav>
+  <nav className=''>
     <h6 className="footer-title"></h6>
     <a className="link link-hover">About</a>
     <a className="link link-hover">Contact</a>

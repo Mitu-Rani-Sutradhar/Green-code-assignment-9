@@ -8,7 +8,7 @@ const Experts = () => {
         
              
                
-                 <div className='flex w-50%'>
+                 <div className='lg:flex w-50%'>
                    <div className='py-20 bg-amber-50'>
                      <div className='flex gap-20'>
                         <p className='font-bold text-l pl-5'>Name:  </p>
@@ -23,7 +23,7 @@ const Experts = () => {
                    
                 </div>
 
-                <div className='flex w-50% py-5'>
+                <div className='lg:flex w-50% py-5'>
                    <div className='py-20 bg-amber-50'>
                      <div className='flex gap-20'>
                         <p className='font-bold text-l pl-5'>Name:  </p>
@@ -38,7 +38,7 @@ const Experts = () => {
                    
                 </div>
 
-                <div className='flex w-50% mb-5'>
+                <div className='lg:flex w-50% mb-5'>
                    <div className='py-20 bg-amber-50'>
                      <div className='flex gap-20'>
                         <p className='font-bold text-l pl-5'>Name:  </p>

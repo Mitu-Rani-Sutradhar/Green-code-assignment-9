@@ -21,7 +21,7 @@ const handleLogOut =()=>{
 
     return (
       
-   <div className='w-full rounded-sm  p-5  flex justify-between items-center items-center
+   <div className='w-full rounded-sm  p-5 lg:flex justify-between items-center items-center
    '>
 
    <div className='text-5xl bg-emerald-700 rounded-2xl mb-20'><PiTreePalm /></div>

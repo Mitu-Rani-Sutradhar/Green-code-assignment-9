@@ -11,7 +11,7 @@ const PlantsTips = () => {
         <div className='mx-auto'>
           <h1 className='py-5 font-bold text-2xl underline text-blue-900'>Plant Care Tips</h1>
         
-     <div className='flex justify-around pl-'>
+     <div className='lg:flex justify-around pl-'>
         <div className='w-[300px]'>
             <h1 className='font-bold py-3 underline'>Watering Tips</h1>
           <div className='mx-auto'>
