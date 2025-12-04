@@ -1,16 +1,18 @@
 import React from 'react';
-import AllPlants from "../conponents/AllPlants";
+import MyProfile from '../conponents/MyProfile';
 import Navbar from '../conponents/Navbar';
 import Footer from '../conponents/Footer';
 
-const PlantsLayout = () => {
+const MyProfileLayout = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <AllPlants></AllPlants>
+            <main className='py-7'>
+                <MyProfile></MyProfile>
+            </main>
             <Footer></Footer>
         </div>
     );
 };
 
-export default PlantsLayout;
+export default MyProfileLayout;

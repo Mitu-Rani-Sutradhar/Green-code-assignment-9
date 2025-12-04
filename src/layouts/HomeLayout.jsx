@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigate } from 'react-router';
 import Footer from '../conponents/Footer';
 
 import Navbar from '../conponents/Navbar';
@@ -9,26 +9,17 @@ import Experts from '../conponents/Experts';
 import PlantsTips from '../conponents/PlantsTips';
 
 const HomeLayout = () => {
+    const {state} = useNavigate();
     return (
         <div>
-            <nav className='sticky top-0 h-fit'>
+            <header className=''>
                <Navbar></Navbar>
-            </nav>
+               {import.meta.env.VITE_name}
+            </header>
             <main>
-                <section>
-                <Hero></Hero>
-                </section>
-                <section>
-                    <TopRatedPlants></TopRatedPlants>
-                </section>
-                <section>
-                    <PlantsTips></PlantsTips>
-                </section>
-                <section>
-                    <Experts></Experts>
-                </section>
+               
                 <section className=''>
-                    <Outlet></Outlet>
+                 {state=="loading" ? <Loading/> :  <Outlet></Outlet>} 
                 </section>
                 
             </main>

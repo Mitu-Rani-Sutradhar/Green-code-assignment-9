@@ -20,7 +20,7 @@ const Hero = () => {
       >
         <div className=''
         >
-            <img className='mx-auto h-[300px] w-full rounded-xl'     
+            <img className='mx-auto mt-2 h-[300px] w-full rounded-sm'     
             src="https://i.ibb.co.com/xbfN9Yh/HD-wallpaper-nature-nice-view-green-view-nature.jpg
             " alt="" />
         <h2 className='font-bold py-5 text-xl'
@@ -32,7 +32,7 @@ const Hero = () => {
       </SwiperSlide>
       <SwiperSlide>
 <div>
-    <img className='mx-auto h-[300px] w-full rounded-xl' 
+    <img className='mx-auto pt-5 h-[300px] w-full rounded-xl' 
      src="https://i.ibb.co.com/yBx3ZnVS/vertical-shot-mesmerizing-landscape-forested-mountains-181624-48206.jpg
     " alt="" />
 </div>
@@ -43,7 +43,7 @@ const Hero = () => {
 
       </SwiperSlide>
       <SwiperSlide>
-        <img className='mx-auto h-[300px] w-full rounded-xl' 
+        <img className='mx-auto pt-5 h-[300px] w-full rounded-xl' 
          src="https://i.ibb.co.com/LDhzt2cX/2851026377-f602b4ea14-b.jpg
         
         " alt="" />
@@ -53,7 +53,7 @@ const Hero = () => {
         </h2>
       </SwiperSlide>
       <SwiperSlide>
-        <img className='mx-auto h-[300px] w-full rounded-xl' 
+        <img className='mx-auto pt-5 h-[300px] w-full rounded-xl' 
         src="https://i.ibb.co.com/NGKPphM/premium-photo-1675827055694-010aef2cf08f-w-600-auto-format-fit-crop-q-60-ixlib-rb-4-1.jpg
         
         " alt="" />

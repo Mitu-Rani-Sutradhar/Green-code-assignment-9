@@ -5,8 +5,8 @@ import { FaSquarePinterest } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <div className='bg-base-300'>
-            <footer className="footer flex justify-between items-center sm:footer-horizontal text-base-content px-80 py-10">
+        <div className='bg-base-300 h-[200px]'>
+            <footer className="footer flex justify-between items-center sm:footer-horizontal text-base-content px-80 pt-6">
   
   <nav>
     <h6 className="footer-title"></h6>
@@ -26,7 +26,7 @@ const Footer = () => {
  
 </footer>
  <div className='mx-auto'>
-    <p className='pb-10 font-semibold text-lg'>“© 2025 GreenNest. All rights reserved.”
+    <p className='py-5 font-semibold text-lg'>“© 2025 GreenNest. All rights reserved.”
 </p>
   </div>
         </div>

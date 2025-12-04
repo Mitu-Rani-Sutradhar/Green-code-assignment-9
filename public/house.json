@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "plantName": "Monstera Deliciosa",
+    "image": "https://i.ibb.co.com/7tLkDMZw/images-q-tbn-ANd9-Gc-Tpl-K0zj-IQ0-FLOxn-Bw-TXZWNcn-Wy-Hawh24rm-JQ-s.jpg"
+  },
+  {
+    "id": 2,
+    "plantName": "Snake Plant",
+    "image": "https://i.ibb.co.com/MHvKwSR/images-q-tbn-ANd9-Gc-To-Z9ntu6-KT0l-Ij-XWAHd-Ow1-Uqm-O3-Mr8-D06-YXQ-s.jpg"
+  },
+  {
+    "id": 3,
+    "plantName": "Aloe Vera",
+    "image": "https://i.ibb.co.com/mFGNRJcd/81-XWp-Vvk5-AL.jpg"
+  },
+  {
+    "id": 4,
+    "plantName": "ZZ Plant",
+    "image": "https://i.ibb.co.com/TDYW5C7c/BD-ZZ-FAMILY-1000x1100-5d75a883-2430-46b4-831e-402659b3e3b0.jpg"
+  }
+]

@@ -1,5 +1,6 @@
 import React, { use, useEffect, useState } from 'react';
 import { ImGift } from 'react-icons/im';
+import { Link } from 'react-router';
 
 const plantPromise = fetch("/plants.json").then((res) =>res.json());
 const TopRatedPlants = () => {
@@ -32,10 +33,10 @@ const TopRatedPlants = () => {
                  {item.plantName}
             </div>
              <div className='flex justify-between px-6'>
-                <p className='bg-amber-100 rounded-xl p-1'>Price-{item.price}</p>
+                <p className='bg-amber-100 rounded-xl p-1'>Price-{item.price} tk</p>
                 <p className='rounded-xl p-1 text-red-500'>Rating-{item.rating}</p>
              </div>
-             <button className='btn bg-blue-300 my-3'>View Details</button>
+             <Link to={`/details/${item.plantId}`} className='btn bg-blue-300 my-3'>View Details</Link>
              </div>
             ))
             }
