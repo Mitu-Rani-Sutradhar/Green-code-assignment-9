@@ -35,12 +35,12 @@ theme="light"
 />
          {
             data.map(info =>(
-                <div className='border mb-3 w-[800px] mx-auto bg-gray-100 rounded-lg py-3'>
+                <div className='border mb-3 p-2 lg:w-[800px] mx-auto bg-gray-100 rounded-lg py-3'>
                    <img className='mx-auto w-[750px] h-[300px]' src={info.image} alt="" />
                    <p className='py-2 font-bold text-2xl'> {info.plantName}</p>
                    <p className='text-lg'>{info.description}</p>
-                  <div className='flex justify-between px-25'>
-                     <p className='text-xl bg-amber-200 w-[120px] rounded-sm'>Price: {info.price} tk</p>
+                  <div className='flex justify-between lg:px-25'>
+                    <p className='text-xl bg-amber-200 w-[120px] rounded-sm'>Price: {info.price} tk</p>
                    <p className='text-red-700 bg-cyan-100 w-[70px] rounded-sm'>Rating: {info.rating}</p>
                   </div>
                    <p className='mx-auto'>(Stock-{info.availableStock})</p>

@@ -98,7 +98,7 @@ const handleGoogleSignIn = ()=>{
       
       
     </div>
-    <div className="card bg-base-100 w-[500px] max-w-sm shrink-0 shadow-2xl">
+    <div className="card bg-base-100 lg:w-[500px] max-w-sm shrink-0 shadow-2xl">
         <h1 className="text-xl font-bold">Signup Your Account!</h1>
       <form onSubmit={handleRegister} className="card-body">
         <fieldset className="fieldset">
